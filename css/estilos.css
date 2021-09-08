@@ -76,12 +76,14 @@ button:hover {
   align-items: center;
   flex-direction: column;
   min-height: 90vh;
+
 }
 .inicio h1 {
   font-size: 120px;
   padding: 30px 20px 30px 100px;
   color: #20dad8;
   text-align: center;
+
 }
 
 .inicio h2 {
@@ -100,8 +102,8 @@ button:hover {
 }
 
 .banner img {
-  padding: 30px 50px 30px 20px;
-  max-width: 90%;
+  padding: 30px 50px 30px 0px;
+  max-width: 100%;
 }
 
 .carrera {
@@ -173,6 +175,7 @@ button:hover {
 .proyectos {
   grid-area: proyectos;
   min-height: 80vh;
+  margin-top: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,6 +187,13 @@ button:hover {
   padding-bottom: 50px;
   color: #fff;
   text-decoration: underline;
+}
+
+.proyectos p {
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+
 }
 
 .proyectos ul {
@@ -215,9 +225,13 @@ button:hover {
   opacity: 100%;
 }
 
+
+
+
 .contacto{
   grid-area: contacto;
-  min-height: 50vh;
+  margin-top: 30vh;
+  margin-bottom: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,3 +273,221 @@ button:hover {
     color: #fff;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 1400px){
+
+      .contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+          "header header"
+          "inicio inicio"
+          "banner banner"
+          "carrera carrera"
+          "carreraFt carreraFt"
+          "proyectos proyectos"
+          "contacto contacto"
+          "footer footer";
+      }
+
+      .inicio {
+        min-height: 30vh;
+
+    }
+
+    .inicio h1{
+      padding: 0%;
+
+}
+    .inicio h2{
+         padding: 0%;
+
+  }
+
+    .banner {
+      min-height: 30vh;
+ 
+  }
+
+  .banner img{
+    padding: 0%;
+
+}
+
+.carrera {
+  min-height: 70vh;
+  margin-top: 30vh;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.carreraFt {
+  min-height: 10vh;
+  grid-area: carreraFt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carreraFt img{
+  max-width: 40%;
+  padding: 0%;
+
+}
+
+
+}
+
+@media (max-width: 890px){
+
+  .carrera ul {
+
+    padding-top: 10px;
+    max-width: 90%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+
+
+.carrera li img{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.proyectos p {
+  padding: 60px;
+  text-align: center;
+}
+
+.proyectos ul{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.proyectos li {
+
+  padding: 0px 0px;
+}
+
+.proyectos li img {
+  max-width: 90%;
+ 
+}
+
+.proyectos li a {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+}
+
+@media (max-width: 600px){
+
+  .inicio h1 {
+    font-size: 90px;
+    
+}
+
+.carreraFt img {
+  max-width: 60%;
+
+}
+
+.carrera {
+
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.carrera h3 {
+
+  padding-bottom: 30px;
+  padding-left: 0%;
+ 
+}
+
+.carrera p {
+
+  padding: 30px;
+
+
+}
+
+.proyectos li img {
+  max-width: 70%;
+ 
+}
+
+.contacto p {
+  padding: 30px;
+  text-align: center;
+}
+
+.contacto img {
+  max-width: 300px;
+  padding-bottom: 20px;
+}
+
+.contactos{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactos a {
+
+  padding: 20px 15px;
+
+}
+
+
+
+
+}
+      
+
+@media (max-width: 400px){
+
+  .inicio h1 {
+    font-size: 70px;
+    padding: 10px;
+    
+}
+
+.inicio h2 {
+  font-size: 30px;
+  padding: 10px;
+  
+}
+.proyectos li img {
+  max-width: 50%;
+ 
+}
+
+}
+      
+    
