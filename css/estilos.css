@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: .05em;
+  background: #24252a;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "header header header header"
+    "inicio inicio banner banner"
+    "carreraFt carrera carrera carrera"
+    "proyectos proyectos proyectos proyectos"
+    "contacto contacto contacto contacto"
+    "footer footer footer footer";
+}
+
+li,
+a,
+button {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+}
+
+.navMenu {
+  list-style: none;
+}
+.navMenu li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navMenu li {
+  transition: all 0.5s ease 0s;
+}
+
+.navMenu li:hover {
+  color: #20dad8;
+  cursor: pointer;
+}
+
+button {
+  padding: 9px 25px;
+  background: #20dad8;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background: #fff;
+  color: #20dad8;
+}
+
+.inicio {
+  grid-area: inicio;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+}
+.inicio h1 {
+  font-size: 120px;
+  padding: 30px 20px 30px 100px;
+  color: #20dad8;
+  text-align: center;
+}
+
+.inicio h2 {
+  font-size: 40px;
+  padding: 30px 20px 30px 100px;
+  color: #fff;
+  text-align: center;
+}
+
+.banner {
+  grid-area: banner;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  padding: 30px 50px 30px 20px;
+  max-width: 90%;
+}
+
+.carrera {
+  grid-area: carrera;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 80px;
+}
+
+.carrera h3 {
+  font-size: 25px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.carrera p {
+  color: #fff;
+  font-size: 20px;
+  padding-left: 50px;
+  text-align: center;
+}
+
+
+.carrera ul {
+  list-style: none;
+  padding-top: 40px;
+}
+
+.carrera li {
+  padding: 30px;
+}
+
+.carrera img {
+  max-height: 120px;
+  padding: 15px;
+  opacity: 75%;
+  transition: 0.5s;
+}
+.carrera img:hover {
+  transform: scale(1.2);
+  opacity: 100%;
+}
+
+
+
+
+
+.carreraFt {
+  min-height: 100vh;
+  grid-area: carreraFt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carreraFt img{
+  padding-left: 80px;
+}
+
+
+
+
+
+.proyectos {
+  grid-area: proyectos;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.proyectos h3 {
+  font-size: 25px;
+  padding-bottom: 50px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.proyectos ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.proyectos li {
+  display: inline-block;
+  padding: 0px 20px;
+  
+}
+
+.proyectos li img {
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px #000, 0px 0px 10px #000;
+  transition: 0.5s;
+  opacity: 70%;
+  cursor: pointer;
+  max-width: 90%;
+}
+
+.proyectos li img:hover {
+  background: #20dad8;
+  opacity: 100%;
+}
+
+.contacto{
+  grid-area: contacto;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+
+.contacto h3{
+  font-size: 25px;
+  padding-bottom: 50px;
+  color: #fff;
+  text-decoration: underline;
+
+}
+
+.contacto img{
+  max-width: 500px;
+  padding-bottom: 20px;
+
+}
+
+.contacto p {
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+
+}
+
+.contactos a{
+  color: #20dad8;
+  padding: 20px 40px;
+  transition: all 0.3s ease 0s;
+
+  }
+
+  .contactos a:hover{
+    text-decoration: underline;
+    color: #fff;
+    }
+
