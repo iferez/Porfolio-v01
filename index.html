@@ -10,14 +10,23 @@
   <body>
     <div class="contenedor">
       <header>
-        <a href="#inicioID" id="inicioID"><button>iFerez</button></a>
         <nav>
-          <ul class="navMenu">
+          <a href="https://github.com/iferez" target="_blank">
+            <img class="logo" src="/img/logo.png" alt="logo" />
+          </a>
+
+          <ul class="enlaces-menu">
             <li><a href="#"></a>Inicio</li>
-            <li><a href="#carreraID"></a>Carrera</li>
-            <li><a href="#proyectosID"></a>Proyectos</li>
+            <li><a href="#"></a>Carrera</li>
+            <li><a href="#"></a>Proyectos</li>
             <li><a href="#"></a>Contacto</li>
           </ul>
+
+          <button class="ham" type="button">
+            <span class="br-1"></span>
+            <span class="br-2"></span>
+            <span class="br-3"></span>
+          </button>
         </nav>
       </header>
 
@@ -60,28 +69,56 @@
         </ul>
       </div>
 
-      <div class="proyectos" id="proyectosID">
+      <section class="bodi">
         <h3>Proyectos</h3>
-
         <p>Aqui algunos de mis trabajos en Maquetación Web y Java</p>
-        <ul>
-          <li>
-            <a href="#"><img src="/img/proyecto1.jpg" alt="" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="/img/proyecto2.jpg" alt="" /></a>
-          </li>
-        </ul>
 
-        <ul>
-          <li>
-            <a href="#"><img src="/img/proyecto3.jpg" alt="" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="/img/proyecto4.jpg" alt="" /></a>
-          </li>
-        </ul>
-      </div>
+        <div class="proyectos" id="proyectosID">
+          <div class="card">
+            <div class="imgBx">
+              <img src="/img/proyecto1.jpg" alt="" />
+            </div>
+
+            <div class="content">
+              <h2>Proyecto uno</h2>
+              <p>lorem ipasodnasdo asdasdoas asodaksod asdokasod</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="/img/proyecto2.jpg" alt="" />
+            </div>
+
+            <div class="content">
+              <h2>Proyecto dos</h2>
+              <p>lorem ipasodnasdo asdasdoas asodaksod asdokasod</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="/img/proyecto3.jpg" alt="" />
+            </div>
+
+            <div class="content">
+              <h2>Proyecto tres</h2>
+              <p>lorem ipasodnasdo asdasdoas asodaksod asdokasod</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="imgBx">
+              <img src="/img/proyecto4.jpg" alt="" />
+            </div>
+
+            <div class="content">
+              <h2>Proyecto cuatro</h2>
+              <p>lorem ipasodnasdo asdasdoas asodaksod asdokasod</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div class="contacto">
         <h3>Contacto</h3>
@@ -102,10 +139,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/2ea59c3164.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

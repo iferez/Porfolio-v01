@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   background: #24252a;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -23,49 +23,66 @@
 }
 
 li,
-a,
-button {
+a {
   font-weight: 400;
   font-size: 20px;
   color: #fff;
   text-decoration: none;
 }
+
 header {
   grid-area: header;
+}
+
+.logo {
+  width: 120px;
+  height: 25;
+}
+
+nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 10%;
+  justify-content: space-around;
+
+  min-height: 8vh;
 }
 
-.navMenu {
-  list-style: none;
-}
-.navMenu li {
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-.navMenu li {
-  transition: all 0.5s ease 0s;
-}
-
-.navMenu li:hover {
-  color: #20dad8;
+.ham {
+  display: none;
   cursor: pointer;
-}
-
-button {
-  padding: 9px 25px;
-  background: #20dad8;
   border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
-button:hover {
+.ham span {
+  display: block;
   background: #fff;
+  height: 3px;
+  width: 28px;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+.enlaces-menu {
+  display: flex;
+}
+
+.enlaces-menu li {
+  padding: 0 40px;
+  list-style: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.enlaces-menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.enlaces-menu li:hover {
   color: #20dad8;
 }
 
@@ -76,14 +93,12 @@ button:hover {
   align-items: center;
   flex-direction: column;
   min-height: 90vh;
-
 }
 .inicio h1 {
   font-size: 120px;
   padding: 30px 20px 30px 100px;
   color: #20dad8;
   text-align: center;
-
 }
 
 .inicio h2 {
@@ -131,7 +146,6 @@ button:hover {
   text-align: center;
 }
 
-
 .carrera ul {
   list-style: none;
   padding-top: 40px;
@@ -152,10 +166,6 @@ button:hover {
   opacity: 100%;
 }
 
-
-
-
-
 .carreraFt {
   min-height: 100vh;
   grid-area: carreraFt;
@@ -164,71 +174,110 @@ button:hover {
   align-items: center;
 }
 
-.carreraFt img{
+.carreraFt img {
   padding-left: 80px;
 }
 
-
-
-
-
-.proyectos {
+.bodi {
   grid-area: proyectos;
-  min-height: 80vh;
-  margin-top: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 20vh;
 }
 
-.proyectos h3 {
+.bodi h3 {
   font-size: 25px;
   padding-bottom: 50px;
   color: #fff;
   text-decoration: underline;
 }
 
-.proyectos p {
+.bodi p {
   font-size: 20px;
   padding-bottom: 20px;
   color: #fff;
-
 }
 
-.proyectos ul {
-  list-style: none;
+.proyectos {
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-
-}
-.proyectos li {
-  display: inline-block;
-  padding: 0px 20px;
-  
+  flex-wrap: wrap;
+  padding: 80px;
 }
 
-.proyectos li img {
-  padding: 10px;
-  margin: 20px;
-  box-shadow: 0px 0px 10px #000, 0px 0px 10px #000;
-  transition: 0.5s;
-  opacity: 70%;
-  cursor: pointer;
-  max-width: 90%;
+.proyectos .card {
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+
+  margin: 10% 10%;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
 }
 
-.proyectos li img:hover {
-  background: #20dad8;
+.proyectos .card:hover {
+  height: 350px;
+}
+
+.proyectos .card .imgBx {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  opacity: 60%;
+  transition: 0.8s ease-in-out;
+}
+
+.proyectos .card .imgBx:hover {
   opacity: 100%;
 }
 
+.proyectos .card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+}
 
+.proyectos .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
 
+.proyectos .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
 
-.contacto{
+.proyectos .card .content h2 {
+  padding-bottom: 8px;
+  color: #20dad8;
+  font-size: 20px;
+}
+
+.proyectos .card .content p {
+  color: #fff;
+  font-size: 16px;
+}
+
+.contacto {
   grid-area: contacto;
   margin-top: 30vh;
   margin-bottom: 10vh;
@@ -239,255 +288,248 @@ button:hover {
   padding: 40px;
 }
 
-
-.contacto h3{
+.contacto h3 {
   font-size: 25px;
   padding-bottom: 50px;
   color: #fff;
   text-decoration: underline;
-
 }
 
-.contacto img{
+.contacto img {
   max-width: 500px;
   padding-bottom: 20px;
-
 }
 
 .contacto p {
   font-size: 20px;
   padding-bottom: 20px;
   color: #fff;
-
-}
-
-.contactos a{
-  color: #20dad8;
-  padding: 20px 40px;
-  transition: all 0.3s ease 0s;
-
-  }
-
-  .contactos a:hover{
-    text-decoration: underline;
-    color: #fff;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @media (max-width: 1400px){
-
-      .contenedor {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, auto);
-        grid-template-areas:
-          "header header"
-          "inicio inicio"
-          "banner banner"
-          "carrera carrera"
-          "carreraFt carreraFt"
-          "proyectos proyectos"
-          "contacto contacto"
-          "footer footer";
-      }
-
-      .inicio {
-        min-height: 30vh;
-
-    }
-
-    .inicio h1{
-      padding: 0%;
-
-}
-    .inicio h2{
-         padding: 0%;
-
-  }
-
-    .banner {
-      min-height: 30vh;
- 
-  }
-
-  .banner img{
-    padding: 0%;
-
-}
-
-.carrera {
-  min-height: 70vh;
-  margin-top: 30vh;
-  padding-right: 80px;
-  padding-left: 80px;
-}
-
-.carreraFt {
-  min-height: 10vh;
-  grid-area: carreraFt;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carreraFt img{
-  max-width: 40%;
-  padding: 0%;
-
-}
-
-
-}
-
-@media (max-width: 890px){
-
-  .carrera ul {
-
-    padding-top: 10px;
-    max-width: 90%;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-
- 
-}
-
-
-.carrera li img{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-
-.proyectos p {
-  padding: 60px;
-  text-align: center;
-}
-
-.proyectos ul{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.proyectos li {
-
-  padding: 0px 0px;
-}
-
-.proyectos li img {
-  max-width: 90%;
- 
-}
-
-.proyectos li a {
-  display:flex;
-  justify-content: center;
-  align-items: center;
- 
-}
-
-}
-
-@media (max-width: 600px){
-
-  .inicio h1 {
-    font-size: 90px;
-    
-}
-
-.carreraFt img {
-  max-width: 60%;
-
-}
-
-.carrera {
-
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-.carrera h3 {
-
-  padding-bottom: 30px;
-  padding-left: 0%;
- 
-}
-
-.carrera p {
-
-  padding: 30px;
-
-
-}
-
-.proyectos li img {
-  max-width: 70%;
- 
-}
-
-.contacto p {
-  padding: 30px;
-  text-align: center;
-}
-
-.contacto img {
-  max-width: 300px;
-  padding-bottom: 20px;
-}
-
-.contactos{
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .contactos a {
-
-  padding: 20px 15px;
-
+  color: #20dad8;
+  padding: 20px 40px;
+  transition: all 0.3s ease 0s;
 }
 
-
-
-
+.contactos a:hover {
+  text-decoration: underline;
+  color: #fff;
 }
-      
 
-@media (max-width: 400px){
+@media (max-width: 1400px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      "header header"
+      "inicio inicio"
+      "banner banner"
+      "carrera carrera"
+      "carreraFt carreraFt"
+      "proyectos proyectos"
+      "contacto contacto"
+      "footer footer";
+  }
 
+  .inicio {
+    min-height: 30vh;
+  }
+
+  .inicio h1 {
+    padding: 0%;
+  }
+  .inicio h2 {
+    padding: 0%;
+  }
+
+  .banner {
+    min-height: 30vh;
+  }
+
+  .banner img {
+    padding: 0%;
+  }
+
+  .carrera {
+    min-height: 70vh;
+    margin-top: 30vh;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+
+  .carreraFt {
+    min-height: 10vh;
+    grid-area: carreraFt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carreraFt img {
+    max-width: 40%;
+    padding: 0%;
+  }
+}
+
+@media (max-width: 890px) {
+  .ham {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    transition: 0.2s 0.1s;
+  }
+  .ham:hover {
+    transform: rotate(360deg);
+  }
+
+  .logo {
+    padding-left: 30px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px 0;
+  }
+
+  .enlaces-menu {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 92vh;
+    margin: 0;
+    width: 100%;
+    display: none;
+    opacity: 0;
+  }
+
+  .enlaces-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .enlaces-menu li:hover {
+    background: #20dad8;
+    color: #fff;
+  }
+
+  @keyframes mostrarMenu {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .enlaces-menu.activado {
+    display: flex;
+    animation: mostrarMenu 350ms ease-in-out both;
+  }
+
+  .br-1.animado {
+    transform: rotate(-45deg) translate(-10px, 8px);
+  }
+
+  .br-2.animado {
+    opacity: 0;
+  }
+
+  .br-3.animado {
+    transform: rotate(45deg) translate(-10px, -8px);
+  }
+
+  .carrera ul {
+    padding-top: 10px;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carrera li img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bodi h3 {
+    padding: 30px;
+    text-align: center;
+  }
+  .bodi p {
+    padding: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .inicio h1 {
+    font-size: 90px;
+  }
+
+  .carreraFt img {
+    max-width: 60%;
+  }
+
+  .carrera {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .carrera h3 {
+    padding-bottom: 30px;
+    padding-left: 0%;
+  }
+
+  .carrera p {
+    padding: 30px;
+  }
+
+  .proyectos .card {
+    margin: 20% 20%;
+    padding: 20px 15px;
+  }
+
+  .contacto p {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .contacto img {
+    max-width: 300px;
+    padding-bottom: 20px;
+  }
+
+  .contactos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contactos a {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 400px) {
   .inicio h1 {
     font-size: 70px;
     padding: 10px;
-    
-}
+  }
 
-.inicio h2 {
-  font-size: 30px;
-  padding: 10px;
-  
-}
-.proyectos li img {
-  max-width: 50%;
- 
-}
+  .inicio h2 {
+    font-size: 30px;
+    padding: 10px;
+  }
 
+  .proyectos .card {
+    margin: 0% 0%;
+    margin-top: 100px;
+    padding: 20px 15px;
+  }
 }
-      
-    
