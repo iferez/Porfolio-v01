@@ -101,11 +101,42 @@ nav {
   text-align: center;
 }
 
-.inicio h2 {
-  font-size: 40px;
-  padding: 30px 20px 30px 100px;
+.loader {
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: #20dad8;
+  animation: blinkCursor 0.8s steps(3) infinite;
+}
+
+.loader h2 {
+  position: relative;
+
   color: #fff;
-  text-align: center;
+  letter-spacing: 5px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  animation: typing 8s steps(17) infinite;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0%,
+  90%,
+  100% {
+    width: 0;
+  }
+  30%,
+  60% {
+    width: 450px;
+  }
 }
 
 .banner {
@@ -214,7 +245,6 @@ nav {
   position: relative;
   max-width: 300px;
   height: 215px;
-
   margin: 10% 10%;
   padding: 20px 15px;
   display: flex;
@@ -224,7 +254,7 @@ nav {
 }
 
 .proyectos .card:hover {
-  height: 350px;
+  height: 380px;
 }
 
 .proyectos .card .imgBx {
@@ -306,15 +336,39 @@ nav {
   color: #fff;
 }
 
-.contactos a {
-  color: #20dad8;
-  padding: 20px 40px;
-  transition: all 0.3s ease 0s;
+.redes {
+  margin: 50px;
+}
+.redes ul {
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+.redes ul li {
+  position: relative;
+  list-style: none;
+  margin: 20px;
 }
 
-.contactos a:hover {
-  text-decoration: underline;
+.redes ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 80px;
+  height: 80px;
+  font-size: 2em;
   color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: 0.5s;
+}
+
+.redes ul li:hover a {
+  transform: translateY(-30px);
+  border-radius: 50%;
+  border: 3px solid #20dad8;
 }
 
 @media (max-width: 1400px) {
@@ -465,11 +519,31 @@ nav {
     padding: 30px;
     text-align: center;
   }
+
+  .proyectos .card .content p {
+    padding: 0;
+  }
 }
 
 @media (max-width: 600px) {
   .inicio h1 {
     font-size: 90px;
+  }
+
+  .loader h2 {
+    font-size: 1.5em;
+  }
+
+  @keyframes typing {
+    0%,
+    90%,
+    100% {
+      width: 0;
+    }
+    30%,
+    60% {
+      width: 350px;
+    }
   }
 
   .carreraFt img {
@@ -505,15 +579,6 @@ nav {
     padding-bottom: 20px;
   }
 
-  .contactos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .contactos a {
-    padding: 20px 15px;
-  }
 }
 
 @media (max-width: 400px) {
@@ -522,9 +587,20 @@ nav {
     padding: 10px;
   }
 
-  .inicio h2 {
-    font-size: 30px;
-    padding: 10px;
+  .loader h2 {
+    font-size: 1em;
+  }
+
+  @keyframes typing {
+    0%,
+    90%,
+    100% {
+      width: 0;
+    }
+    30%,
+    60% {
+      width: 250px;
+    }
   }
 
   .proyectos .card {
@@ -532,4 +608,13 @@ nav {
     margin-top: 100px;
     padding: 20px 15px;
   }
+
+  .redes ul li a {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: 0.5s;
+}
 }
