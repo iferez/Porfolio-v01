@@ -209,7 +209,7 @@ nav {
   padding-left: 80px;
 }
 
-.bodi {
+.proyects {
   grid-area: proyectos;
   display: flex;
   justify-content: center;
@@ -218,14 +218,14 @@ nav {
   margin-top: 20vh;
 }
 
-.bodi h3 {
+.proyects h3 {
   font-size: 25px;
   padding-bottom: 50px;
   color: #fff;
   text-decoration: underline;
 }
 
-.bodi p {
+.proyects p {
   font-size: 20px;
   padding-bottom: 20px;
   color: #fff;
@@ -511,11 +511,11 @@ nav {
     align-items: center;
   }
 
-  .bodi h3 {
+  .proyects h3 {
     padding: 30px;
     text-align: center;
   }
-  .bodi p {
+  .proyects p {
     padding: 30px;
     text-align: center;
   }
