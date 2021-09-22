@@ -78,11 +78,11 @@ nav {
 
 .enlaces-menu li a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
-.enlaces-menu li:hover {
+.enlaces-menu a:hover {
   color: #20dad8;
 }
 
@@ -371,6 +371,28 @@ nav {
   border: 3px solid #20dad8;
 }
 
+.button-up{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  transform: scale(0);
+
+}
+
+.button-up:hover{
+  transform: scale(1.1);
+  color: #20dad8;
+}
 @media (max-width: 1400px) {
   .contenedor {
     display: grid;
